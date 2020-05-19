@@ -107,6 +107,11 @@ public class MainActivity extends AppCompatActivity {
                 country = "No Country Selected";
             }
         });
+
+        String finalMessage = "Name: " + name + "\nEmail: " + email + "\nDescription: " + describtion + "\nWebsite: " + website;
+        Toast.makeText(this, finalMessage, Toast.LENGTH_LONG).show();
+        )
+
     }
     private void initOnClickListeners (){
             backArrow.setOnClickListener(new View.OnClickListener() {
@@ -120,6 +125,20 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(MainActivity.this, "settings tapped", Toast.LENGTH_LONG).show();
+                }
+            });
+
+            voice.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(MainActivity.this, "Voice Selected", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            cart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(MainActivity.this, "Cart Selected", Toast.LENGTH_SHORT).show();
                 }
             });
     }
